@@ -2,7 +2,6 @@ var config = require('./config.json')
 var Promise = require('promise')
 var requestClient = Promise.denodeify(require('request'));
 var getIp = Promise.denodeify(require('external-ip')());
-var Forecast = require('forecast');
 var DarkSky = require('dark-sky');
 var forecast = new DarkSky(config.apiKeys.darkSky)
 getIp()
